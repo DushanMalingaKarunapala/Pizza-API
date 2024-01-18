@@ -1,7 +1,8 @@
 // import { pizzaData } from "../../public/data";
 
 export const Pizza = (props) => {
-  const { name, photoName, ingredients, price } = props;
+  const { name, photoName, ingredients, price, soldOut } = props;
+
   console.log(props);
 
   return (
