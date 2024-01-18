@@ -1,10 +1,17 @@
-import { pizzaData } from "../../public/data";
-export const Pizza = () => {
+// import { pizzaData } from "../../public/data";
+
+export const Pizza = (props) => {
+  const { name, photoName, ingredients, price } = props;
+  console.log(props);
+
   return (
-    <div>
-      <img src="pizzas/spinaci.jpg" alt="Pizza spinaci" />
-      <h1>Foccasia</h1>
-      <h3>Bread with italian olive oil and rosemary</h3>
-    </div>
+    <li className="pizza">
+      <img src={props.pizzaObj.photoName} alt={name} />
+      <div>
+        <h3>{props.pizzaObj.name}</h3>
+        <p>{props.pizzaObj.ingredients}</p>
+        <span>{props.pizzaObj.price}</span>
+      </div>
+    </li>
   );
 };
